@@ -18,7 +18,7 @@
                     }
                 },
                 "Description": "A greeting function",
-                "FunctionName": "GreetingLambda",
+                "FunctionName": "GreetingLambda1",
                 "Handler": "index.lambda_handler",
                 "Role": {
                     "Fn::GetAtt": [

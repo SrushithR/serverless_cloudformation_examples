@@ -1,9 +1,9 @@
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Description": "AWS CloudFormation sample template that contains a single Lambda function behind an API Gateway",
-    "Parameters" : {
-        "name" : {
-            "String" : "Welcome to the CloudOps Meetup!" 
+    "Parameters": {
+        "name": {
+            "Type": "String"
         }
     },
     "Resources": {
@@ -25,7 +25,7 @@
                     }
                 },
                 "Description": "A greeting function",
-                "FunctionName": "GreetingLambda",
+                "FunctionName": "GreetingLambda2",
                 "Handler": "index.lambda_handler",
                 "Role": {
                     "Fn::GetAtt": [
@@ -284,9 +284,9 @@
                         {
                             "Ref": "AWS::Region"
                         },
-                        ".amazonaws.com,",
+                        ".amazonaws.com/",
                         {
-                            "Ref" : "GreetingApiStage"
+                            "Ref": "GreetingApiStage"
                         },
                         "/greet"
                     ]
