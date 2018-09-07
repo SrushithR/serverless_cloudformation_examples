@@ -261,5 +261,30 @@
                 ]
             }
         }
+    },
+    "Outputs": {
+        "RootUrl": {
+            "Description": "Root URL of the API gateway",
+            "Value": {
+                "Fn::Join": [
+                    "",
+                    [
+                        "https://",
+                        {
+                            "Ref": "GreetingApi"
+                        },
+                        ".execute-api.",
+                        {
+                            "Ref": "AWS::Region"
+                        },
+                        ".amazonaws.com,",
+                        {
+                            "Ref" : "GreetingApiStage"
+                        },
+                        "/greet"
+                    ]
+                ]
+            }
+        }
     }
 }
