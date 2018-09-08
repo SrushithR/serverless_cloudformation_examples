@@ -56,7 +56,7 @@
         "GreetingApi": {
             "Type": "AWS::ApiGateway::RestApi",
             "Properties": {
-                "Name": "Greeting API",
+                "Name": "Greeting API1",
                 "Description": "API used for Greeting requests",
                 "FailOnWarnings": true
             }
